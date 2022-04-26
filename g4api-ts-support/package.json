@@ -1,0 +1,21 @@
+{
+  "name": "g4api-ts-support",
+  "version": "1.5.5",
+  "description": "Support tools for g4api-ts module",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "install": "npm run build"
+  },
+  "keywords": [],
+  "author": "Ferruccio Barletta (ferruccio.barletta@gmail.com)",
+  "license": "",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^0.21.4",
+    "g4api-ts": "^1.5.2"
+  }
+}
