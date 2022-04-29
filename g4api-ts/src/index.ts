@@ -1,14 +1,10 @@
-// created from ctix
-
 export * from './Admin';
 export * from './Admins';
 export * from './Auth';
 export * from './Collections';
-export * from './data-contracts';
 export * from './Document';
 export * from './Documents';
 export * from './ExportUsers';
-export * from './http-client';
 export * from './ImportUsers';
 export * from './Password';
 export * from './Policy';
@@ -33,3 +29,5 @@ export * from './UserMetadata';
 export * from './UserPassword';
 export * from './UserResetTokens';
 export * from './Users';
+export * from './data-contracts';
+export * from './http-client';
