@@ -1,7 +1,7 @@
 {
-  "name": "g4api-ts",
+  "name": "@microsearch/g4api",
   "version": "1.5.2",
-  "description": "G4 API bindings for TypeScript",
+  "description": "G4 API bindings",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",

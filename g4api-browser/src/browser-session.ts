@@ -4,8 +4,8 @@
   existed.
 */
 
-import * as g4 from "g4api-ts";
-import { G4Api, G4ApiOptions } from "g4api-ts-support";
+import * as g4 from "@microsearch/g4api";
+import { G4Api, G4ApiOptions } from "@microsearch/g4api-support";
 
 // Since session tokens expire in 15 minutes, setting the refresh interval to
 // just under 5 minutes gives us 3 attempts to refresh the session token before

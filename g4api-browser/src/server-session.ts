@@ -3,8 +3,8 @@
   It is the preferred way to create G4 sessions in the browser.
 */
 
-import * as g4 from "g4api-ts";
-import { G4Api, G4ApiOptions, getG4ApiError } from "g4api-ts-support";
+import * as g4 from "@microsearch/g4api";
+import { G4Api, G4ApiOptions, getG4ApiError } from "@microsearch/g4api-support";
 
 const getLocalStorageKey = (app?: string) => `g4-${app ?? "app"}-session`;
 

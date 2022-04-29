@@ -1,7 +1,7 @@
 {
-  "name": "g4api-ts-support",
+  "name": "@microsearch/g4api-support",
   "version": "1.5.5",
-  "description": "Support tools for g4api-ts module",
+  "description": "Support tools for @microsearch/g4api package",
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "axios": "^0.21.4",
-    "g4api-ts": "^1.5.2"
+    "@microsearch/g4api": "^1.5.2"
   }
 }

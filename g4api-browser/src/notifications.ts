@@ -12,7 +12,7 @@ import {
   G4UserCreateMessage,
   G4UserImportMessage,
   G4UserUpdateMessage,
-} from "g4api-ts";
+} from "@microsearch/g4api";
 
 export { subscribe, G4NotificationOptions, G4Subscriptions };
 

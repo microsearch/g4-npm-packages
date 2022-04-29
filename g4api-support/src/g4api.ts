@@ -1,4 +1,4 @@
-import * as g4 from "g4api-ts";
+import * as g4 from "@microsearch/g4api";
 
 export { G4ApiOptions, G4ApiCloneOptions, G4Api };
 
