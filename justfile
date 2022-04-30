@@ -18,3 +18,8 @@ rebuild:
     cd {{ justfile_directory() }}/g4api-browser
     npm ci
     npm run build
+
+# list all packages in microsearch namespace
+list:
+    @aws codeartifact list-packages --domain microsearch \
+        --repository microsearch --namespace microsearch --format npm
