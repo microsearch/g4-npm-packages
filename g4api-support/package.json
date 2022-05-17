@@ -1,6 +1,6 @@
 {
   "name": "@microsearch/g4api-support",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "Support tools for @microsearch/g4api package",
   "main": "lib/index.js",
   "scripts": {
