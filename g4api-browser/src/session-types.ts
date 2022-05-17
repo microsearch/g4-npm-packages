@@ -1,3 +1,6 @@
+/**
+ * @deprecated Import this from @microsearch/g4api-support instead
+ */
 export enum G4UserStatus {
   Pending = 0,
   Active = 1,
@@ -7,6 +10,9 @@ export enum G4UserStatus {
   Anonymous = 5,
 }
 
+/**
+ * @deprecated Import this from @microsearch/g4api-support instead
+ */
 export enum G4UserEventType {
   UserAuthenticated = 0,
   UserAuthenticationFailure = 1,
