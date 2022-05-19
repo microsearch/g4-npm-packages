@@ -3,12 +3,40 @@ import axios from "axios";
 export { G4ApiError, getG4ApiError };
 
 type G4ApiError = {
+  /**
+   * The original source of the error
+   */
   source: "network" | "http" | "auth" | "g4" | "other";
+  /**
+   * Code specific to the error source
+   */
   code?: string;
+  /**
+   * Human readable error message
+   */
   message: string;
+  /**
+   * Details specific to the error source
+   */
   details?: object;
 };
 
+/**
+ *
+ * Map an error thrown by an API request into a normalized format.
+ *
+ * @param error Error thrown by API request
+ *
+ * example:
+ * ```typescript
+ * try {
+ *   // API request code
+ * } catch (error: unknown) {
+ *   const err = getG4ApiError(error);
+ *   console.log(`Error (${err.source}): ${err.message}`);
+ * }
+ * ```
+ */
 function getG4ApiError(error: unknown): G4ApiError {
   if (!axios.isAxiosError(error)) {
     return {
