@@ -11,7 +11,7 @@ export class S3Buckets extends Construct {
     );
   }
 
-  public get LogginBucket() {
+  public get LoggingBucket() {
     return this.logging_bucket;
   }
 

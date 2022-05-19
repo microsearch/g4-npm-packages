@@ -75,7 +75,7 @@ export class Route53Zones extends Construct {
   public get AdminZone() {
     return this.admin_zone;
   }
-  public get MrcAwsone() {
+  public get MrcAwsZone() {
     return this.mrcaws_zone;
   }
   public get MrcApiZone() {
