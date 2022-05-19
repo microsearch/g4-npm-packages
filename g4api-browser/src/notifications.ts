@@ -52,6 +52,9 @@ type G4Subscriptions = {
   };
 };
 
+/**
+ * Subscribe to G4 Notifications
+ */
 function subscribe(options: G4NotificationOptions) {
   if (options.endpoint.match(/^[a-z]+$/))
     options.endpoint = `wss://g4n-${options.endpoint}.v1.mrcapi.net`;

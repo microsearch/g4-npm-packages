@@ -1,9 +1,3 @@
-/*
-  G4BrowserSession represents a session maintained entirely in the browser.
-  It is here mainly to support older apps created before the G4 session API
-  existed.
-*/
-
 import * as g4 from "@microsearch/g4api";
 import { G4Api, G4ApiOptions } from "@microsearch/g4api-support";
 
@@ -12,6 +6,11 @@ import { G4Api, G4ApiOptions } from "@microsearch/g4api-support";
 // we can no longer talk to the server.
 const REFRESH_INTERVAL = 4.75 * 60 * 1000; // ms
 
+/**
+ * G4BrowserSession represents a session maintained entirely in the browser.
+ * It is here mainly to support older apps created before the G4 session API
+ * existed.
+ */
 export class G4BrowserSession extends G4Api {
   constructor(options: G4ApiOptions) {
     super(options);
