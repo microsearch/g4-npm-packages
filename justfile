@@ -1,22 +1,25 @@
 _list:
     @just --list
 
-# rebuild all packages
+# rebuild all packages with updated dependencies
 rebuild:
     #!/usr/bin/env bash
     set -euxo pipefail
 
     git clean -fxd
     cd {{ justfile_directory() }}/g4api
-    npm ci
+    rm -f package-lock.json
+    npm install
     npm run gen-dev
 
     cd {{ justfile_directory() }}/g4api-support
-    npm ci
+    rm -f package-lock.json
+    npm install
     npm run build
 
     cd {{ justfile_directory() }}/g4api-browser
-    npm ci
+    rm -f package-lock.json
+    npm install
     npm run build
 
 # list all packages in microsearch namespace
