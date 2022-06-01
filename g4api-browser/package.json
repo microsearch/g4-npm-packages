@@ -1,6 +1,6 @@
 {
   "name": "@microsearch/g4api-browser",
-  "version": "1.5.6",
+  "version": "1.5.8",
   "description": "Browser-only tools for @microsearch/g4api-support package",
   "main": "lib/index.js",
   "scripts": {

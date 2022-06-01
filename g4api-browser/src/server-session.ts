@@ -157,5 +157,5 @@ export class G4ServerSession extends G4Api {
   }
 
   private localStorageKey: string;
-  private authentication: g4.AuthenticatedSessionResponse | null = null;
+  public authentication: g4.AuthenticatedSessionResponse | null = null;
 }
