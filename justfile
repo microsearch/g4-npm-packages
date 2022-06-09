@@ -22,6 +22,11 @@ rebuild:
     npm install
     npm run build
 
+    cd {{ justfile_directory() }}/infrastructure
+    rm -f package-lock.json
+    npm install
+    npm run build
+
 # list all packages in microsearch namespace
 list:
     @aws codeartifact list-packages --domain microsearch \

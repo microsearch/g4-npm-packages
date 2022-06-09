@@ -6,14 +6,14 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "docs": "npx typedoc lib/index.ts"
+    "docs": "typedoc lib/index.ts"
   },
   "devDependencies": {
     "typedoc": "^0.22.15",
     "typescript": "^4.6.4"
   },
-  "peerDependencies": {
-    "aws-cdk-lib": "2.22.0",
+  "dependencies": {
+    "aws-cdk-lib": "^2.22.0",
     "constructs": "^10.0.0"
   }
 }
