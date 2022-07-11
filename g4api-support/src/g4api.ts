@@ -115,217 +115,217 @@ class G4Api {
    * /admin API
    */
   get admin() {
-    return new g4.Admin(this.config);
+    return new g4.AdminAPI(this.config);
   }
 
   /**
    * /admins API
    */
   get admins() {
-    return new g4.Admins(this.config);
+    return new g4.AdminsAPI(this.config);
   }
 
   /**
    * /auth API
    */
   get auth() {
-    return new g4.Auth(this.config);
+    return new g4.AuthAPI(this.config);
   }
 
   /**
    * /collections API
    */
   get collections() {
-    return new g4.Collections(this.config);
+    return new g4.CollectionsAPI(this.config);
   }
 
   /**
    * /document API
    */
   get document() {
-    return new g4.Document(this.config);
+    return new g4.DocumentAPI(this.config);
   }
 
   /**
    * /documents API
    */
   get documents() {
-    return new g4.Documents(this.config);
+    return new g4.DocumentsAPI(this.config);
   }
 
   /**
    * /export-users API
    */
   get exportUsers() {
-    return new g4.ExportUsers(this.config);
+    return new g4.ExportUsersAPI(this.config);
   }
 
   /**
    * /import-users API
    */
   get importUsers() {
-    return new g4.ImportUsers(this.config);
+    return new g4.ImportUsersAPI(this.config);
   }
 
   /**
    * /password API
    */
   get password() {
-    return new g4.Password(this.config);
+    return new g4.PasswordAPI(this.config);
   }
 
   /**
    * /policy API
    */
   get policy() {
-    return new g4.Policy(this.config);
+    return new g4.PolicyAPI(this.config);
   }
 
   /**
    * /profile API
    */
   get profile() {
-    return new g4.Profile(this.config);
+    return new g4.ProfileAPI(this.config);
   }
 
   /**
    * /profile-metadata API
    */
   get profileMetadata() {
-    return new g4.ProfileMetadata(this.config);
+    return new g4.ProfileMetadataAPI(this.config);
   }
 
   /**
    * /profiles API
    */
   get profiles() {
-    return new g4.Profiles(this.config);
+    return new g4.ProfilesAPI(this.config);
   }
 
   /**
    * /role API
    */
   get role() {
-    return new g4.Role(this.config);
+    return new g4.RoleAPI(this.config);
   }
 
   /**
    * /role-metadata API
    */
   get roleMetadata() {
-    return new g4.RoleMetadata(this.config);
+    return new g4.RoleMetadataAPI(this.config);
   }
 
   /**
    * /roles API
    */
   get roles() {
-    return new g4.Roles(this.config);
+    return new g4.RolesAPI(this.config);
   }
 
   /**
    * /session API
    */
   get session() {
-    return new g4.Session(this.config);
+    return new g4.SessionAPI(this.config);
   }
 
   /**
    * /sync API
    */
   get sync() {
-    return new g4.Sync(this.config);
+    return new g4.SyncAPI(this.config);
   }
 
   /**
    * /tenant API
    */
   get tenant() {
-    return new g4.Tenant(this.config);
+    return new g4.TenantAPI(this.config);
   }
 
   /**
    * /tenant-metadata API
    */
   get tenantMetadata() {
-    return new g4.TenantMetadata(this.config);
+    return new g4.TenantMetadataAPI(this.config);
   }
 
   /**
    * /tenants API
    */
   get tenants() {
-    return new g4.Tenants(this.config);
+    return new g4.TenantsAPI(this.config);
   }
 
   /**
    * /user API
    */
   get user() {
-    return new g4.User(this.config);
+    return new g4.UserAPI(this.config);
   }
 
   /**
    * /user-claim API
    */
   get userClaim() {
-    return new g4.UserClaim(this.config);
+    return new g4.UserClaimAPI(this.config);
   }
 
   /**
    * /user-claim-tokens API
    */
   get userClaimTokens() {
-    return new g4.UserClaimTokens(this.config);
+    return new g4.UserClaimTokensAPI(this.config);
   }
 
   /**
    * /user-details API
    */
   get userDetails() {
-    return new g4.UserDetails(this.config);
+    return new g4.UserDetailsAPI(this.config);
   }
 
   /**
    * /user-events API
    */
   get userEvents() {
-    return new g4.UserEvents(this.config);
+    return new g4.UserEventsAPI(this.config);
   }
 
   /**
    * /user-import API
    */
   get userImport() {
-    return new g4.UserImport(this.config);
+    return new g4.UserImportAPI(this.config);
   }
 
   /**
    * /user-metadata API
    */
   get userMetadata() {
-    return new g4.UserMetadata(this.config);
+    return new g4.UserMetadataAPI(this.config);
   }
 
   /**
    * /user-password API
    */
   get userPassword() {
-    return new g4.UserPassword(this.config);
+    return new g4.UserPasswordAPI(this.config);
   }
 
   /**
    * /user-reset-tokens API
    */
   get userResetTokens() {
-    return new g4.UserResetTokens(this.config);
+    return new g4.UserResetTokensAPI(this.config);
   }
 
   /**
    * /users API
    */
   get users() {
-    return new g4.Users(this.config);
+    return new g4.UsersAPI(this.config);
   }
 
   private options: G4ApiOptions;
