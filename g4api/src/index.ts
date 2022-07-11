@@ -1,6 +1,7 @@
 export * from './Admin';
 export * from './Admins';
 export * from './Auth';
+export * from './Collection';
 export * from './Collections';
 export * from './Document';
 export * from './Documents';

@@ -12,7 +12,7 @@
 import { GetTenantsResponse, ProblemDetails } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class Tenants<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class TenantsAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

@@ -12,7 +12,7 @@
 import { GetUserEventsRequest, GetUserEventsResponse, ProblemDetails } from "./data-contracts";
 import { ContentType, HttpClient, RequestParams } from "./http-client";
 
-export class UserEvents<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class UserEventsAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * @description Returns a list of user events.
    *

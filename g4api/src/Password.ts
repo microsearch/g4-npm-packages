@@ -12,7 +12,7 @@
 import { PasswordChangeRequest, ProblemDetails } from "./data-contracts";
 import { ContentType, HttpClient, RequestParams } from "./http-client";
 
-export class Password<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class PasswordAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

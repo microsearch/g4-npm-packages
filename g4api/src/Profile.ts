@@ -18,7 +18,7 @@ import {
 } from "./data-contracts";
 import { ContentType, HttpClient, RequestParams } from "./http-client";
 
-export class Profile<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class ProfileAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

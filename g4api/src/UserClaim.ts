@@ -12,7 +12,7 @@
 import { ProblemDetails, UserClaimAccountRequest } from "./data-contracts";
 import { ContentType, HttpClient, RequestParams } from "./http-client";
 
-export class UserClaim<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class UserClaimAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

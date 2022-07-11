@@ -12,7 +12,7 @@
 import { GetAdminsResponse, ProblemDetails } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class Admins<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class AdminsAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * @description Returns the list of all admin user records.
    *

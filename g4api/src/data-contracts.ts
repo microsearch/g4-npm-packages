@@ -47,20 +47,6 @@ export interface Collection {
   /** @format int32 */
   id: number;
   name: string;
-  title: string;
-  instances: CollectionInstance[];
-}
-
-export interface CollectionDocument {
-  signature?: string | null;
-  filename?: string | null;
-  title: string;
-  fields: Record<string, string>;
-}
-
-export interface CollectionInstance {
-  /** @format int32 */
-  id: number;
   schema: Record<string, FieldDescriptor>;
 
   /** @format date-time */
@@ -87,6 +73,16 @@ export interface CreateAdminRequest {
 export interface CreateAdminResponse {
   /** @format int32 */
   id?: number;
+}
+
+export interface CreateCollectionRequest {
+  name: string;
+  schema: Record<string, FieldDescriptor>;
+}
+
+export interface CreateCollectionResponse {
+  /** @format int32 */
+  id: number;
 }
 
 export interface CreateProfileRequest {
@@ -153,6 +149,18 @@ export interface CreateUserResponse {
   id: number;
 }
 
+export interface Document {
+  signature: string;
+  filename: string;
+}
+
+export interface DocumentUpdate {
+  doc: Document;
+  title: string;
+  docMetadata: Record<string, string>;
+  attachments: Document[];
+}
+
 export interface ExportedUser {
   /** @format date-time */
   created: string;
@@ -194,7 +202,6 @@ export interface G4CollectionLoadedMessage {
   /** @format int32 */
   count: number;
   name: string;
-  title: string;
 }
 
 export interface G4CollectionLoadingMessage {
@@ -506,23 +513,6 @@ export interface PasswordPolicy {
   minNonAlphanumeric?: number;
 }
 
-export interface PostCollectionRequest {
-  jobId?: string | null;
-  name: string;
-  title: string;
-  schema: Record<string, FieldDescriptor>;
-  documents: CollectionDocument[];
-}
-
-export interface PostCollectionResponse {
-  /** @format int32 */
-  collectionId: number;
-
-  /** @format int32 */
-  instanceId: number;
-  errors: string[];
-}
-
 export interface ProblemDetails {
   type?: string | null;
   title?: string | null;
@@ -573,6 +563,19 @@ export interface SecurityToken {
   token: string;
 }
 
+export interface UpdateCollectionRequest {
+  /** @format int32 */
+  collectionId: number;
+  update: DocumentUpdate[];
+  archive: string[];
+}
+
+export interface UpdateCollectionResponse {
+  /** @format int32 */
+  collectionId: number;
+  status: UpdateStatus[];
+}
+
 export interface UpdateProfileRequest {
   name?: string | null;
   collections?: number[] | null;
@@ -589,6 +592,13 @@ export interface UpdateRoleRequest {
   defaultScope?: string | null;
   newName?: string | null;
   claims?: string[] | null;
+}
+
+export interface UpdateStatus {
+  signature: string;
+  filename: string | null;
+  failed: boolean;
+  message: string;
 }
 
 export interface UpdateUserRequest {

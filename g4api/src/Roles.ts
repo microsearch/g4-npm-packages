@@ -12,7 +12,7 @@
 import { GetRolesResponse, ProblemDetails } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class Roles<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class RolesAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

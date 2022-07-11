@@ -12,7 +12,7 @@
 import { ProblemDetails, SecurityToken } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class UserResetTokens<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class UserResetTokensAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

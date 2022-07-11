@@ -12,7 +12,7 @@
 import { PasswordPolicy, ProblemDetails } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class Policy<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class PolicyAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

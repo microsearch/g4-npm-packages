@@ -9,24 +9,26 @@
  * ---------------------------------------------------------------
  */
 
-import { ExportUsersResponse, ProblemDetails } from "./data-contracts";
-import { HttpClient, RequestParams } from "./http-client";
+import { ProblemDetails, UpdateCollectionRequest, UpdateCollectionResponse } from "./data-contracts";
+import { ContentType, HttpClient, RequestParams } from "./http-client";
 
-export class ExportUsersAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class CollectionAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *
-   * @tags ImportExport
+   * @tags Collections
    * @name Post
-   * @summary Export users
-   * @request POST:/export-users
+   * @summary Add/Update documents in a collection
+   * @request POST:/collection
    * @secure
    */
-  post = (params: RequestParams = {}) =>
-    this.request<ExportUsersResponse, ProblemDetails>({
-      path: `/export-users`,
+  post = (data: UpdateCollectionRequest, params: RequestParams = {}) =>
+    this.request<UpdateCollectionResponse, ProblemDetails>({
+      path: `/collection`,
       method: "POST",
+      body: data,
       secure: true,
+      type: ContentType.Json,
       format: "json",
       ...params,
     });

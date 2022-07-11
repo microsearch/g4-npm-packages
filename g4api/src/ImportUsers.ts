@@ -12,7 +12,7 @@
 import { ImportUsersRequest, ImportUsersResponse, ProblemDetails } from "./data-contracts";
 import { ContentType, HttpClient, RequestParams } from "./http-client";
 
-export class ImportUsers<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class ImportUsersAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

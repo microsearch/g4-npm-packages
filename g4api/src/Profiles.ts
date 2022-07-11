@@ -12,7 +12,7 @@
 import { GetProfilesResponse, ProblemDetails } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class Profiles<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class ProfilesAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *

@@ -10,19 +10,20 @@
  */
 
 import {
+  CreateCollectionRequest,
+  CreateCollectionResponse,
   GetCollectionsResponse,
-  PostCollectionRequest,
-  PostCollectionResponse,
   ProblemDetails,
 } from "./data-contracts";
 import { ContentType, HttpClient, RequestParams } from "./http-client";
 
-export class Collections<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class CollectionsAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *
    * @tags Collections
    * @name Get
+   * @summary Get list of document collections
    * @request GET:/collections
    * @secure
    */
@@ -39,11 +40,12 @@ export class Collections<SecurityDataType = unknown> extends HttpClient<Security
    *
    * @tags Collections
    * @name Post
+   * @summary Create document collection
    * @request POST:/collections
    * @secure
    */
-  post = (data: PostCollectionRequest, params: RequestParams = {}) =>
-    this.request<PostCollectionResponse, ProblemDetails>({
+  post = (data: CreateCollectionRequest, params: RequestParams = {}) =>
+    this.request<CreateCollectionResponse, ProblemDetails>({
       path: `/collections`,
       method: "POST",
       body: data,

@@ -12,7 +12,7 @@
 import { ProblemDetails } from "./data-contracts";
 import { HttpClient, RequestParams } from "./http-client";
 
-export class Sync<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
+export class SyncAPI<SecurityDataType = unknown> extends HttpClient<SecurityDataType> {
   /**
    * No description
    *
