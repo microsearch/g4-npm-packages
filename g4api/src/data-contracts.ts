@@ -59,12 +59,48 @@ export interface Collection {
   indexed: string | null;
 }
 
+export interface CollectionContentsDocument {
+  title: string;
+  signature: string;
+  docMetadata: Record<string, string>;
+}
+
+export interface CollectionContentsDocumentsRequest {
+  /** @format int32 */
+  collectionId: number;
+  contentsFields: ContentsField[];
+  docMetadataFieldnames: string[];
+}
+
+export interface CollectionContentsDocumentsResponse {
+  documents: CollectionContentsDocument[];
+}
+
+export interface CollectionContentsRecord {
+  values: string[];
+}
+
+export interface CollectionContentsRequest {
+  /** @format int32 */
+  collectionId: number;
+  contentsFieldnames: string[];
+}
+
+export interface CollectionContentsResponse {
+  records: CollectionContentsRecord[];
+}
+
+export interface ContentsField {
+  name: string;
+  value: string;
+}
+
 export interface CreateAdminRequest {
   username: string;
-  password?: string | null;
-  passwordCrypto?: string | null;
-  passwordSalt?: string | null;
-  passwordHash?: string | null;
+  password?: string;
+  passwordCrypto?: string;
+  passwordSalt?: string;
+  passwordHash?: string;
   fullname: string;
   email: string;
   roles: number[];
@@ -130,17 +166,17 @@ export interface CreateTenantResponse {
 }
 
 export interface CreateUserRequest {
-  status?: UserStatus;
-  username?: string | null;
-  password?: string | null;
-  fullname?: string | null;
-  email?: string | null;
-  roles?: number[] | null;
-  profiles?: number[] | null;
-  collections?: number[] | null;
-  denyCollections?: number[] | null;
-  customFields?: Record<string, any>;
-  appName?: string | null;
+  status: UserStatus;
+  username: string;
+  password: string;
+  fullname: string;
+  email: string;
+  roles: number[];
+  profiles: number[];
+  collections: number[];
+  denyCollections: number[];
+  customFields: Record<string, any>;
+  appName: string | null;
   appMetadata?: Record<string, any>;
 }
 
