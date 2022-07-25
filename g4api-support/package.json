@@ -1,6 +1,6 @@
 {
   "name": "@microsearch/g4api-support",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Support tools for @microsearch/g4api package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -16,7 +16,7 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {
-    "@microsearch/g4api": "^1.6.0",
+    "@microsearch/g4api": "^1.6.1",
     "axios": "^0.21.4"
   }
 }
